@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360" role="img" aria-label="Researcher reputation anomaly guard summary">
+  <rect width="760" height="360" fill="#f8fafc"/>
+  <rect x="32" y="32" width="696" height="296" rx="8" fill="#ffffff" stroke="#d7dee8"/>
+  <text x="56" y="76" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#172033">Reputation anomaly guard</text>
+  <text x="56" y="106" font-family="Arial, sans-serif" font-size="14" fill="#526173">Synthetic badge-safety review for SCIBASE user profiles</text>
+    <text x="56" y="132" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">Risky profile</text>
+  <rect x="56" y="148" width="420" height="26" rx="4" fill="#e8edf4"/>
+  <rect x="56" y="148" width="294" height="26" rx="4" fill="#c2410c"/>
+  <rect x="350" y="148" width="210" height="26" fill="#f6c453"/>
+  <text x="496" y="166" font-family="Arial, sans-serif" font-size="13" fill="#172033">7 blockers, 5 warnings</text>
+    <text x="56" y="202" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">Clean profile</text>
+  <rect x="56" y="218" width="420" height="26" rx="4" fill="#e8edf4"/>
+  <rect x="56" y="218" width="0" height="26" rx="4" fill="#15803d"/>
+  <rect x="56" y="218" width="0" height="26" fill="#f6c453"/>
+  <text x="496" y="236" font-family="Arial, sans-serif" font-size="13" fill="#172033">0 blockers, 0 warnings</text>
+    <text x="56" y="272" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">Stale profile</text>
+  <rect x="56" y="288" width="420" height="26" rx="4" fill="#e8edf4"/>
+  <rect x="56" y="288" width="0" height="26" rx="4" fill="#b7791f"/>
+  <rect x="56" y="288" width="42" height="26" fill="#f6c453"/>
+  <text x="496" y="306" font-family="Arial, sans-serif" font-size="13" fill="#172033">0 blockers, 1 warnings</text>
+  <text x="548" y="312" font-family="Arial, sans-serif" font-size="12" fill="#526173">Digest 9e0a152011f4be2e</text>
+</svg>

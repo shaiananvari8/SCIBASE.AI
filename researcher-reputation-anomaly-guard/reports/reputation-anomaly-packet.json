@@ -1,0 +1,143 @@
+{
+  "risky": {
+    "generatedAt": "2026-05-27T22:00:00Z",
+    "status": "hold_reputation_badges",
+    "summary": {
+      "status": "hold_reputation_badges",
+      "researcherCount": 1,
+      "heldResearchers": 1,
+      "reviewResearchers": 0,
+      "blockerCount": 7,
+      "warningCount": 5
+    },
+    "researchers": [
+      {
+        "researcherId": "researcher-risky",
+        "displayName": "Dr. Mira Vale",
+        "status": "hold_reputation_badges",
+        "reputationScore": 0,
+        "blockers": [
+          {
+            "code": "download_burst",
+            "message": "Recent downloads are 35.7x above baseline."
+          },
+          {
+            "code": "concentrated_download_source",
+            "message": "72% of recent downloads came from one network cluster."
+          },
+          {
+            "code": "fork_ring_suspected",
+            "message": "2 of 3 forks look self-controlled or weakly verified."
+          },
+          {
+            "code": "reciprocal_endorsement_cluster",
+            "message": "2 of 3 endorsements are reciprocal."
+          },
+          {
+            "code": "reproducibility_score_inflation",
+            "message": "2 high-score reproducibility runs are self or lab controlled."
+          },
+          {
+            "code": "weak_reproducibility_evidence",
+            "message": "1 high-score runs have missing environment, data, or output freshness evidence."
+          },
+          {
+            "code": "private_profile_metric_exposure",
+            "message": "Profile mode is institutional, but public metric badges are enabled."
+          }
+        ],
+        "warnings": [
+          {
+            "code": "low_download_diversity",
+            "message": "Only 1 institutions appear in the recent download window."
+          },
+          {
+            "code": "thin_fork_activity",
+            "message": "2 forks have no downstream commit evidence."
+          },
+          {
+            "code": "new_affiliation_endorsements",
+            "message": "2 endorsements came from new accounts at the same affiliation."
+          },
+          {
+            "code": "unverified_endorsers",
+            "message": "2 endorsers lack verified identity evidence."
+          },
+          {
+            "code": "anonymous_review_linkage_risk",
+            "message": "Endorsement badges could reveal anonymous-review participation patterns."
+          }
+        ],
+        "actions": [
+          "Hold download-derived badges until traffic provenance is reviewed.",
+          "Require bot and same-network traffic review before publishing metrics.",
+          "Show metric as provisional until institution diversity improves.",
+          "Exclude suspect forks from reputation scoring and queue identity review.",
+          "Down-rank fork-count badges until reuse evidence is available.",
+          "Hold endorsement badges and require independent reviewer validation.",
+          "Mark endorsement signal as provisional.",
+          "Require independent reproducibility evidence before showing the score badge.",
+          "Remove weak runs from score calculation.",
+          "Hide reputation badges until profile visibility is reconciled.",
+          "Aggregate endorsement counts before showing them on anonymous-review profiles."
+        ]
+      }
+    ],
+    "auditDigest": "9e0a152011f4be2e67389f701d6b73e630a21a387f6e7d44bd73ac13c5c2a3a0"
+  },
+  "clean": {
+    "generatedAt": "2026-05-27T22:00:00Z",
+    "status": "ready",
+    "summary": {
+      "status": "ready",
+      "researcherCount": 1,
+      "heldResearchers": 0,
+      "reviewResearchers": 0,
+      "blockerCount": 0,
+      "warningCount": 0
+    },
+    "researchers": [
+      {
+        "researcherId": "researcher-clean",
+        "displayName": "Dr. Rowan Chen",
+        "status": "ready",
+        "reputationScore": 100,
+        "blockers": [],
+        "warnings": [],
+        "actions": []
+      }
+    ],
+    "auditDigest": "72e09f87a8cf9883952e870e4fe819a1e0966a579102ffda19fb9c79c09b1740"
+  },
+  "stale": {
+    "generatedAt": "2026-05-27T22:00:00Z",
+    "status": "manual_review",
+    "summary": {
+      "status": "manual_review",
+      "researcherCount": 1,
+      "heldResearchers": 0,
+      "reviewResearchers": 1,
+      "blockerCount": 0,
+      "warningCount": 1
+    },
+    "researchers": [
+      {
+        "researcherId": "researcher-stale",
+        "displayName": "Dr. Imani Stone",
+        "status": "manual_review",
+        "reputationScore": 93,
+        "blockers": [],
+        "warnings": [
+          {
+            "code": "stale_metric_window",
+            "message": "Metric evidence is 96 days old."
+          }
+        ],
+        "actions": [
+          "Refresh metric windows before rendering public badges."
+        ]
+      }
+    ],
+    "auditDigest": "db3aaba107f9589a3f89ca0927dfbac3df3a912b36570a7148d86f7e8b3acda5"
+  }
+}
