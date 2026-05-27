@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Challenge reviewer workload SLA summary">
+  <rect width="960" height="540" fill="#f6f8f4"/>
+  <rect x="28" y="28" width="904" height="484" rx="8" fill="#ffffff" stroke="#b8c5c2"/>
+  <text x="44" y="72" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1b2a2f">Challenge Reviewer Workload SLA Guard</text>
+  <text x="44" y="106" font-family="Arial, sans-serif" font-size="16" fill="#4c5c61">sci-bounty-review-2026-05 - hold_review_window</text>
+  <g font-family="Arial, sans-serif">
+    <text x="44" y="154" font-size="14" fill="#263238">Blockers</text>
+    <rect x="140" y="140" width="440" height="18" rx="4" fill="#f1d9d6"/>
+    <rect x="140" y="140" width="396" height="18" rx="4" fill="#d94f45"/>
+    <text x="600" y="155" font-size="14" fill="#263238">9</text>
+    <text x="44" y="184" font-size="14" fill="#263238">Warnings</text>
+    <rect x="140" y="170" width="440" height="18" rx="4" fill="#f4ead2"/>
+    <rect x="140" y="170" width="132" height="18" rx="4" fill="#c9962f"/>
+    <text x="600" y="185" font-size="14" fill="#263238">3</text>
+    <text x="44" y="205" font-size="14" fill="#263238">Ada River</text>
+        <rect x="210" y="191" width="260" height="12" rx="3" fill="#d9e2e4"/>
+        <rect x="210" y="191" width="260" height="12" rx="3" fill="#d94f45"/>
+        <text x="486" y="205" font-size="13" fill="#263238">130%</text>
+        <text x="44" y="235" font-size="14" fill="#263238">Ben Cross</text>
+        <rect x="210" y="221" width="260" height="12" rx="3" fill="#d9e2e4"/>
+        <rect x="210" y="221" width="195" height="12" rx="3" fill="#d94f45"/>
+        <text x="486" y="235" font-size="13" fill="#263238">75%</text>
+        <text x="44" y="265" font-size="14" fill="#263238">Cora Field</text>
+        <rect x="210" y="251" width="260" height="12" rx="3" fill="#d9e2e4"/>
+        <rect x="210" y="251" width="146" height="12" rx="3" fill="#2f8f68"/>
+        <text x="486" y="265" font-size="13" fill="#263238">56%</text>
+        <text x="44" y="295" font-size="14" fill="#263238">Drew Lane</text>
+        <rect x="210" y="281" width="260" height="12" rx="3" fill="#d9e2e4"/>
+        <rect x="210" y="281" width="163" height="12" rx="3" fill="#d94f45"/>
+        <text x="486" y="295" font-size="13" fill="#263238">63%</text>
+        <text x="44" y="325" font-size="14" fill="#263238">Eli Stone</text>
+        <rect x="210" y="311" width="260" height="12" rx="3" fill="#d9e2e4"/>
+        <rect x="210" y="311" width="260" height="12" rx="3" fill="#d94f45"/>
+        <text x="486" y="325" font-size="13" fill="#263238">100%</text>
+    <text x="44" y="402" font-size="15" font-weight="700" fill="#1b2a2f">Review gate</text>
+    <rect x="44" y="418" width="440" height="18" rx="4" fill="#d9e2e4"/>
+    <rect x="44" y="418" width="120" height="18" rx="4" fill="#2f8f68"/>
+    <text x="504" y="433" font-size="14" fill="#263238">hold_review_window</text>
+    <text x="44" y="474" font-size="13" fill="#5b6b70">Audit digest: 4eeac8cabcce4c5cb4bb5f42...</text>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "name": "challenge-reviewer-workload-sla-guard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Scientific bounty reviewer workload and SLA guard",
+  "scripts": {
+    "check": "node --check index.js && node --check sample-data.js && node --check test.js && node --check demo.js && node --check make-demo-video.js",
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "demo:video": "node make-demo-video.js"
+  },
+  "license": "MIT"
+}
