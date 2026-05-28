@@ -1,0 +1,192 @@
+{
+  "mixed": {
+    "generatedAt": "2026-05-28T06:00:00Z",
+    "manuscriptId": "synthetic-ai-citation-tool-demo",
+    "status": "hold_citation_insertions",
+    "summary": {
+      "status": "hold_citation_insertions",
+      "candidateCount": 3,
+      "blocked": 1,
+      "warned": 1,
+      "allowed": 1,
+      "highestRiskScore": 100
+    },
+    "candidates": [
+      {
+        "candidateId": "candidate-blocked",
+        "title": "Rapid Nano-Bio Discovery With Universal Clinical Claims",
+        "venue": "International Journal of Advanced Universal Science",
+        "action": "block_insertion",
+        "riskScore": 100,
+        "checks": [
+          {
+            "code": "missing_peer_review_evidence",
+            "severity": "blocker",
+            "weight": 35,
+            "message": "Venue does not provide clear peer-review evidence."
+          },
+          {
+            "code": "implausible_acceptance_timeline",
+            "severity": "blocker",
+            "weight": 25,
+            "message": "Acceptance timeline is 3 days."
+          },
+          {
+            "code": "opaque_review_policy",
+            "severity": "warning",
+            "weight": 12,
+            "message": "Peer-review policy is not transparent enough for one-click insertion."
+          },
+          {
+            "code": "disputed_indexing_claim",
+            "severity": "blocker",
+            "weight": 30,
+            "message": "Venue claims indexing that the synthetic evidence marks as unverified."
+          },
+          {
+            "code": "weak_indexing_evidence",
+            "severity": "warning",
+            "weight": 10,
+            "message": "Indexing confidence is 0.22."
+          },
+          {
+            "code": "fake_impact_factor_signal",
+            "severity": "blocker",
+            "weight": 30,
+            "message": "Venue evidence includes a fake impact-factor style signal."
+          },
+          {
+            "code": "weak_editorial_board_evidence",
+            "severity": "warning",
+            "weight": 14,
+            "message": "3 of 18 editorial board members are verified."
+          },
+          {
+            "code": "board_membership_complaints",
+            "severity": "blocker",
+            "weight": 20,
+            "message": "2 editorial board membership complaint signals are present."
+          },
+          {
+            "code": "paper_mill_template_signal",
+            "severity": "blocker",
+            "weight": 25,
+            "message": "Venue or article metadata matches synthetic paper-mill template signals."
+          },
+          {
+            "code": "special_issue_spike",
+            "severity": "warning",
+            "weight": 12,
+            "message": "Special issue volume spike needs human review before citation insertion."
+          },
+          {
+            "code": "citation_ring_signal",
+            "severity": "warning",
+            "weight": 14,
+            "message": "Citation pattern suggests a narrow venue-level citation ring."
+          },
+          {
+            "code": "hijacked_journal_identity_risk",
+            "severity": "blocker",
+            "weight": 35,
+            "message": "Venue identity appears inconsistent with the canonical journal record."
+          },
+          {
+            "code": "issn_identity_mismatch",
+            "severity": "blocker",
+            "weight": 24,
+            "message": "ISSN evidence does not match the venue identity."
+          },
+          {
+            "code": "poor_venue_scope_fit",
+            "severity": "warning",
+            "weight": 10,
+            "message": "Venue scope fit is 0.41."
+          },
+          {
+            "code": "opaque_fee_disclosure",
+            "severity": "warning",
+            "weight": 10,
+            "message": "Article processing charge is not disclosed before submission."
+          }
+        ],
+        "insertionGuidance": [
+          "Do not insert this citation automatically.",
+          "Show the candidate in a venue-integrity review queue.",
+          "Ask the user to choose a safer venue or provide independent verification."
+        ]
+      },
+      {
+        "candidateId": "candidate-warning",
+        "title": "Open Review Practices for Early Stage Bioinformatics Workflows",
+        "venue": "Applied Open Methods Forum",
+        "action": "warn_before_insertion",
+        "riskScore": 36,
+        "checks": [
+          {
+            "code": "weak_indexing_evidence",
+            "severity": "warning",
+            "weight": 10,
+            "message": "Indexing confidence is 0.64."
+          },
+          {
+            "code": "weak_editorial_board_evidence",
+            "severity": "warning",
+            "weight": 14,
+            "message": "7 of 12 editorial board members are verified."
+          },
+          {
+            "code": "special_issue_spike",
+            "severity": "warning",
+            "weight": 12,
+            "message": "Special issue volume spike needs human review before citation insertion."
+          }
+        ],
+        "insertionGuidance": [
+          "Show an inline venue-integrity warning.",
+          "Require an explicit user confirmation before insertion.",
+          "Attach the warning to the citation audit packet."
+        ]
+      },
+      {
+        "candidateId": "candidate-ready",
+        "title": "Reproducible Citation Recommendation Benchmarks",
+        "venue": "Journal of Reproducible Research Software",
+        "action": "allow_insertion",
+        "riskScore": 0,
+        "checks": [],
+        "insertionGuidance": [
+          "Insert normally and retain the venue-integrity audit digest."
+        ]
+      }
+    ],
+    "auditDigest": "5caac840675042c84c372dc48270207d3d1fc9ead899f20c4a319b4551abb63f"
+  },
+  "ready": {
+    "generatedAt": "2026-05-28T06:00:00Z",
+    "manuscriptId": "synthetic-ready-citation-tool-demo",
+    "status": "ready",
+    "summary": {
+      "status": "ready",
+      "candidateCount": 1,
+      "blocked": 0,
+      "warned": 0,
+      "allowed": 1,
+      "highestRiskScore": 0
+    },
+    "candidates": [
+      {
+        "candidateId": "candidate-ready",
+        "title": "Reproducible Citation Recommendation Benchmarks",
+        "venue": "Journal of Reproducible Research Software",
+        "action": "allow_insertion",
+        "riskScore": 0,
+        "checks": [],
+        "insertionGuidance": [
+          "Insert normally and retain the venue-integrity audit digest."
+        ]
+      }
+    ],
+    "auditDigest": "7ab969f5a1343db6a9f057db876e4492928bde35868d86a47b83010d7c5f9763"
+  }
+}
