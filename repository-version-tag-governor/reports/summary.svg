@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="340" viewBox="0 0 760 340" role="img" aria-label="Repository version tag governance summary">
+  <rect width="760" height="340" fill="#f8fafc"/>
+  <rect x="32" y="32" width="696" height="276" rx="8" fill="#ffffff" stroke="#d7dee8"/>
+  <text x="56" y="76" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#172033">Repository version tag governor</text>
+  <text x="56" y="106" font-family="Arial, sans-serif" font-size="14" fill="#526173">Semantic release and citation-version integrity review</text>
+    <text x="56" y="140" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">Blocked</text>
+  <rect x="56" y="154" width="360" height="24" rx="4" fill="#e8edf4"/>
+  <rect x="56" y="154" width="120" height="24" rx="4" fill="#b91c1c"/>
+  <text x="438" y="171" font-family="Arial, sans-serif" font-size="13" fill="#172033">1 proposal(s)</text>
+    <text x="56" y="200" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">Manual review</text>
+  <rect x="56" y="214" width="360" height="24" rx="4" fill="#e8edf4"/>
+  <rect x="56" y="214" width="120" height="24" rx="4" fill="#b7791f"/>
+  <text x="438" y="231" font-family="Arial, sans-serif" font-size="13" fill="#172033">1 proposal(s)</text>
+    <text x="56" y="260" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">Approved</text>
+  <rect x="56" y="274" width="360" height="24" rx="4" fill="#e8edf4"/>
+  <rect x="56" y="274" width="120" height="24" rx="4" fill="#15803d"/>
+  <text x="438" y="291" font-family="Arial, sans-serif" font-size="13" fill="#172033">1 proposal(s)</text>
+  <text x="548" y="294" font-family="Arial, sans-serif" font-size="12" fill="#526173">Digest 9dc7b2c8ec29eb7e</text>
+</svg>

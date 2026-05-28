@@ -1,0 +1,137 @@
+{
+  "mixed": {
+    "generatedAt": "2026-05-28T08:10:00.000Z",
+    "repositoryId": "synthetic-repository-versioning",
+    "status": "hold_tag_publication",
+    "summary": {
+      "status": "hold_tag_publication",
+      "proposalCount": 3,
+      "blocked": 1,
+      "manualReview": 1,
+      "approved": 1,
+      "blockerCount": 6,
+      "warningCount": 6
+    },
+    "proposals": [
+      {
+        "proposalId": "reused-preprint-tag",
+        "tag": "preprint-v2.0",
+        "releaseType": "preprint",
+        "decision": "block_release_tag",
+        "blockers": [
+          {
+            "code": "version_tag_collision",
+            "message": "preprint-v2.0 already points to a different commit or DOI."
+          },
+          {
+            "code": "non_monotonic_version_tag",
+            "message": "preprint-v2.0 does not advance beyond the latest preprint version."
+          },
+          {
+            "code": "metadata_version_drift",
+            "message": "metadata.json version preprint-v1.9 does not match tag preprint-v2.0."
+          },
+          {
+            "code": "doi_metadata_mismatch",
+            "message": "Repository DOI and metadata DOI differ for the proposed version."
+          },
+          {
+            "code": "artifact_hashes_missing",
+            "message": "Missing hash locks for data."
+          },
+          {
+            "code": "fork_attribution_missing",
+            "message": "Derived repository release lacks parent project attribution."
+          }
+        ],
+        "warnings": [
+          {
+            "code": "citation_version_stale",
+            "message": "Citation text references preprint-v1.9 instead of preprint-v2.0."
+          },
+          {
+            "code": "results_hash_missing",
+            "message": "Results output hash is absent for a reproducibility-bearing tag."
+          },
+          {
+            "code": "changelog_entry_missing",
+            "message": "No changelog entry is attached to the proposed tag."
+          }
+        ],
+        "actions": [
+          "Create a new monotonic tag instead of reusing a published repository version.",
+          "Advance the semantic version or preprint version before publication.",
+          "Update metadata.json before DOI or citation release.",
+          "Reconcile DOI fields before publishing the tag.",
+          "Regenerate citation text and Cite this project metadata for the tag.",
+          "Lock manuscript, data, code, and metadata hashes before release.",
+          "Add result/figure hash evidence or mark the release as metadata-only.",
+          "Attach parent repository DOI and fork lineage before publishing the tag.",
+          "Add a concise changelog entry that explains version-scoped changes."
+        ]
+      },
+      {
+        "proposalId": "minor-release-needs-review",
+        "tag": "v1.3.0",
+        "releaseType": "release",
+        "decision": "manual_review_tag",
+        "blockers": [],
+        "warnings": [
+          {
+            "code": "citation_version_stale",
+            "message": "Citation text references v1.2.0 instead of v1.3.0."
+          },
+          {
+            "code": "results_hash_missing",
+            "message": "Results output hash is absent for a reproducibility-bearing tag."
+          },
+          {
+            "code": "changelog_entry_missing",
+            "message": "No changelog entry is attached to the proposed tag."
+          }
+        ],
+        "actions": [
+          "Regenerate citation text and Cite this project metadata for the tag.",
+          "Add result/figure hash evidence or mark the release as metadata-only.",
+          "Add a concise changelog entry that explains version-scoped changes."
+        ]
+      },
+      {
+        "proposalId": "major-release-ready",
+        "tag": "v2.0.0",
+        "releaseType": "release",
+        "decision": "approve_tag",
+        "blockers": [],
+        "warnings": [],
+        "actions": []
+      }
+    ],
+    "auditDigest": "9dc7b2c8ec29eb7ea6d6c580bf662d2030955576c69344176e6d2caf58bd38f9"
+  },
+  "ready": {
+    "generatedAt": "2026-05-28T08:10:00.000Z",
+    "repositoryId": "synthetic-ready-repository-versioning",
+    "status": "ready",
+    "summary": {
+      "status": "ready",
+      "proposalCount": 1,
+      "blocked": 0,
+      "manualReview": 0,
+      "approved": 1,
+      "blockerCount": 0,
+      "warningCount": 0
+    },
+    "proposals": [
+      {
+        "proposalId": "major-release-ready",
+        "tag": "v2.0.0",
+        "releaseType": "release",
+        "decision": "approve_tag",
+        "blockers": [],
+        "warnings": [],
+        "actions": []
+      }
+    ],
+    "auditDigest": "1c36ac737eb497dbfb0259fc5d5066df268d68105657f60afd1419ef4484f00e"
+  }
+}
