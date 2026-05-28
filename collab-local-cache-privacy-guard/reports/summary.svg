@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="340" viewBox="0 0 760 340" role="img" aria-label="Collaborative local cache privacy summary">
+  <rect width="760" height="340" fill="#f8fafc"/>
+  <rect x="32" y="32" width="696" height="276" rx="8" fill="#ffffff" stroke="#d7dee8"/>
+  <text x="56" y="76" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#172033">Local cache privacy guard</text>
+  <text x="56" y="106" font-family="Arial, sans-serif" font-size="14" fill="#526173">Synthetic autosave persistence and restore safety review</text>
+    <text x="56" y="140" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">Purge/redact</text>
+  <rect x="56" y="154" width="360" height="24" rx="4" fill="#e8edf4"/>
+  <rect x="56" y="154" width="120" height="24" rx="4" fill="#b91c1c"/>
+  <text x="438" y="171" font-family="Arial, sans-serif" font-size="13" fill="#172033">1 snapshot(s)</text>
+    <text x="56" y="200" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">Warn</text>
+  <rect x="56" y="214" width="360" height="24" rx="4" fill="#e8edf4"/>
+  <rect x="56" y="214" width="120" height="24" rx="4" fill="#b7791f"/>
+  <text x="438" y="231" font-family="Arial, sans-serif" font-size="13" fill="#172033">1 snapshot(s)</text>
+    <text x="56" y="260" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">Allow</text>
+  <rect x="56" y="274" width="360" height="24" rx="4" fill="#e8edf4"/>
+  <rect x="56" y="274" width="120" height="24" rx="4" fill="#15803d"/>
+  <text x="438" y="291" font-family="Arial, sans-serif" font-size="13" fill="#172033">1 snapshot(s)</text>
+  <text x="548" y="294" font-family="Arial, sans-serif" font-size="12" fill="#526173">Digest 1a716f6c979022f3</text>
+</svg>

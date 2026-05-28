@@ -1,0 +1,138 @@
+{
+  "mixed": {
+    "generatedAt": "2026-05-28T06:00:00.000Z",
+    "documentId": "synthetic-collab-manuscript",
+    "status": "hold_local_cache",
+    "summary": {
+      "status": "hold_local_cache",
+      "snapshotCount": 3,
+      "purged": 1,
+      "warned": 1,
+      "allowed": 1,
+      "blockerCount": 7,
+      "warningCount": 6
+    },
+    "snapshots": [
+      {
+        "snapshotId": "cache-risky",
+        "editorMode": "WYSIWYG",
+        "decision": "purge_or_redact_cache",
+        "blockers": [
+          {
+            "code": "unencrypted_restricted_cache",
+            "message": "Restricted content is present in an unencrypted local cache snapshot."
+          },
+          {
+            "code": "restricted_localstorage_cache",
+            "message": "Restricted scientific content is cached in long-lived localStorage."
+          },
+          {
+            "code": "restricted_text_cached",
+            "message": "Restricted dataset or manuscript excerpts are present in local autosave text."
+          },
+          {
+            "code": "anonymous_review_identity_cached",
+            "message": "1 anonymous review marker(s) cache reviewer identity details."
+          },
+          {
+            "code": "restricted_notebook_output_cached",
+            "message": "1 cached notebook output(s) include restricted data."
+          },
+          {
+            "code": "private_collaborator_note_cached",
+            "message": "1 private collaborator note(s) are cached locally."
+          },
+          {
+            "code": "shared_device_cache_retention",
+            "message": "Shared-device cache is retained for 10 hours."
+          }
+        ],
+        "warnings": [
+          {
+            "code": "embargoed_title_cached",
+            "message": "Embargoed section titles are cached locally."
+          },
+          {
+            "code": "stale_notebook_output_cached",
+            "message": "1 cached notebook output(s) are stale."
+          },
+          {
+            "code": "weak_device_lock_for_cache",
+            "message": "Restricted cache exists on a device without screen-lock evidence."
+          }
+        ],
+        "actions": [
+          "Purge the local cache or rewrite it into encrypted storage before persistence.",
+          "Move restricted autosave content to short-lived encrypted session storage.",
+          "Redact restricted section text and keep only section hashes in local cache.",
+          "Replace embargoed titles with neutral placeholders before caching.",
+          "Purge cached reviewer identities and retain only blinded review labels.",
+          "Remove restricted notebook outputs from browser cache and retain reproducibility hashes only.",
+          "Invalidate stale notebook outputs before local restore is offered.",
+          "Redact private notes from autosave payloads on shared or recoverable devices.",
+          "Purge shared-device cache after the short retention window.",
+          "Warn user and shorten local cache retention."
+        ]
+      },
+      {
+        "snapshotId": "cache-warning",
+        "editorMode": "Markdown",
+        "decision": "persist_with_warning",
+        "blockers": [],
+        "warnings": [
+          {
+            "code": "stale_cache_snapshot",
+            "message": "Cache snapshot is 54 hours old."
+          },
+          {
+            "code": "embargoed_title_cached",
+            "message": "Embargoed section titles are cached locally."
+          },
+          {
+            "code": "stale_notebook_output_cached",
+            "message": "1 cached notebook output(s) are stale."
+          }
+        ],
+        "actions": [
+          "Expire stale local cache snapshots before they are offered for restore.",
+          "Replace embargoed titles with neutral placeholders before caching.",
+          "Invalidate stale notebook outputs before local restore is offered."
+        ]
+      },
+      {
+        "snapshotId": "cache-ready",
+        "editorMode": "LaTeX",
+        "decision": "allow_cache",
+        "blockers": [],
+        "warnings": [],
+        "actions": []
+      }
+    ],
+    "auditDigest": "1a716f6c979022f3ed9c43f10115cb7d83434c3f8bc56dcdd9f24ea76369cf96"
+  },
+  "ready": {
+    "generatedAt": "2026-05-28T06:00:00.000Z",
+    "documentId": "synthetic-ready-cache",
+    "status": "ready",
+    "summary": {
+      "status": "ready",
+      "snapshotCount": 1,
+      "purged": 0,
+      "warned": 0,
+      "allowed": 1,
+      "blockerCount": 0,
+      "warningCount": 0
+    },
+    "snapshots": [
+      {
+        "snapshotId": "cache-ready",
+        "editorMode": "LaTeX",
+        "decision": "allow_cache",
+        "blockers": [],
+        "warnings": [],
+        "actions": []
+      }
+    ],
+    "auditDigest": "e7974b371216d69e8186ef0b5222e14a98e8b06ddc94341879ff5db2a749d49e"
+  }
+}
