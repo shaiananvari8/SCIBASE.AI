@@ -1,0 +1,138 @@
+{
+  "mixed": {
+    "generatedAt": "2026-05-28T07:30:00.000Z",
+    "manuscriptId": "synthetic-bayesian-review",
+    "status": "hold_peer_review_claims",
+    "summary": {
+      "status": "hold_peer_review_claims",
+      "analysisCount": 3,
+      "major": 1,
+      "minor": 1,
+      "ready": 1,
+      "blockerCount": 7,
+      "warningCount": 6
+    },
+    "analyses": [
+      {
+        "analysisId": "clinical-survival-model",
+        "domain": "clinical trials",
+        "decision": "major_revision_prior_robustness",
+        "blockers": [
+          {
+            "code": "prior_not_reported",
+            "message": "1 model prior(s) are used without manuscript disclosure."
+          },
+          {
+            "code": "posterior_direction_flips_under_prior",
+            "message": "skeptical treatment prior changes effect direction from 0.31 to -0.08."
+          },
+          {
+            "code": "divergent_transitions_present",
+            "message": "14 divergent transition(s) were reported."
+          },
+          {
+            "code": "severe_rhat_convergence_failure",
+            "message": "Maximum R-hat is 1.08."
+          },
+          {
+            "code": "severe_effective_sample_size_shortfall",
+            "message": "Minimum effective sample size is 112."
+          },
+          {
+            "code": "prior_predictive_check_missing",
+            "message": "No prior predictive check is reported for the Bayesian model."
+          },
+          {
+            "code": "strong_claim_not_prior_robust",
+            "message": "claim-treatment-definitive uses strong language without prior-robust support."
+          }
+        ],
+        "warnings": [
+          {
+            "code": "informative_prior_not_justified",
+            "message": "1 informative prior(s) lack domain justification."
+          },
+          {
+            "code": "large_posterior_shift_under_prior",
+            "message": "wider frailty prior shifts posterior estimate by 0.27."
+          }
+        ],
+        "actions": [
+          "Disclose all model priors with parameter values and rationale.",
+          "Add domain rationale or sensitivity analysis for informative priors.",
+          "Mark the manuscript claim as prior-sensitive and add a robustness table.",
+          "Report alternate-prior posterior estimates beside the primary model.",
+          "Resolve sampler divergences before accepting posterior claims.",
+          "Rerun or reparameterize the model until convergence diagnostics pass.",
+          "Increase sampling effort or simplify the model before review.",
+          "Add a prior predictive check before claims are promoted to peer-review text.",
+          "Downgrade claim language or add prior-robust evidence."
+        ]
+      },
+      {
+        "analysisId": "materials-yield-model",
+        "domain": "materials science",
+        "decision": "minor_revision_prior_robustness",
+        "blockers": [],
+        "warnings": [
+          {
+            "code": "informative_prior_not_justified",
+            "message": "1 informative prior(s) lack domain justification."
+          },
+          {
+            "code": "rhat_above_review_threshold",
+            "message": "Maximum R-hat is 1.02."
+          },
+          {
+            "code": "low_effective_sample_size",
+            "message": "Minimum effective sample size is 260."
+          },
+          {
+            "code": "weak_prior_predictive_coverage",
+            "message": "Prior predictive coverage is 58%."
+          }
+        ],
+        "actions": [
+          "Add domain rationale or sensitivity analysis for informative priors.",
+          "Include convergence diagnostics and rerun chains if needed.",
+          "Report effective sample sizes and rerun where posterior tails are unstable.",
+          "Revise priors or explain why prior predictive coverage is low."
+        ]
+      },
+      {
+        "analysisId": "ecology-occupancy-model",
+        "domain": "ecology",
+        "decision": "ready_for_peer_review",
+        "blockers": [],
+        "warnings": [],
+        "actions": []
+      }
+    ],
+    "auditDigest": "0f1f6b29a79b38614e0b5c509f8479266adf55dd81661884b67153e2eb5f9757"
+  },
+  "ready": {
+    "generatedAt": "2026-05-28T07:30:00.000Z",
+    "manuscriptId": "synthetic-ready-bayesian-review",
+    "status": "ready",
+    "summary": {
+      "status": "ready",
+      "analysisCount": 1,
+      "major": 0,
+      "minor": 0,
+      "ready": 1,
+      "blockerCount": 0,
+      "warningCount": 0
+    },
+    "analyses": [
+      {
+        "analysisId": "ecology-occupancy-model",
+        "domain": "ecology",
+        "decision": "ready_for_peer_review",
+        "blockers": [],
+        "warnings": [],
+        "actions": []
+      }
+    ],
+    "auditDigest": "43a9b74dc9b5b4ed480e414f2f5d7b6a7e9d8dae4df9b00cfddabb354aeea190"
+  }
+}

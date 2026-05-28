@@ -1,0 +1,13 @@
+{
+  "name": "bayesian-prior-sensitivity-assistant",
+  "version": "1.0.0",
+  "description": "Synthetic Bayesian prior sensitivity review assistant for SCIBASE issue 16.",
+  "main": "index.js",
+  "scripts": {
+    "check": "node --check index.js && node --check sample-data.js && node --check test.js && node --check demo.js && node --check make-demo-video.js",
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "demo:video": "node make-demo-video.js"
+  },
+  "license": "MIT"
+}
