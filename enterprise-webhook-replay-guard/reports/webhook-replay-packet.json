@@ -1,0 +1,25 @@
+{
+  "title": "SCIBASE Enterprise Webhook Replay Guard",
+  "issue": "SCIBASE.AI#19",
+  "claim": "/claim #19",
+  "evaluation": {
+    "status": "block_delivery",
+    "counts": {
+      "destinations": 2,
+      "events": 4,
+      "blockers": 8,
+      "warnings": 1,
+      "heldEvents": 3
+    },
+    "blockers": [
+      "duplicate_event_id",
+      "reused_idempotency_key",
+      "signature_replay",
+      "stale_retry_window",
+      "non_monotonic_sequence",
+      "out_of_order_export_batch",
+      "missing_destination_acknowledgement",
+      "missing_idempotency_key"
+    ]
+  }
+}
