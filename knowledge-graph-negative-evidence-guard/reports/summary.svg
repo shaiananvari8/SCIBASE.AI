@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img" aria-labelledby="title desc">
+  <title id="title">Negative-Evidence Graph Guard Summary</title>
+  <desc id="desc">Reviewer summary for SCIBASE knowledge graph negative evidence publication guard.</desc>
+  <rect width="720" height="360" fill="#f8fafc"/>
+  <rect x="32" y="28" width="656" height="304" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="56" y="72" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Negative-Evidence Graph Guard</text>
+  <text x="56" y="104" font-family="Arial, sans-serif" font-size="15" fill="#334155">Status: block_publication | Digest: b245bc907bb0911a</text>
+  <text x="56" y="138" font-family="Arial, sans-serif" font-size="14" fill="#334155">Blockers: 5</text>
+  <rect x="56" y="148" width="360" height="20" rx="4" fill="#e2e8f0"/>
+  <rect x="56" y="148" width="320" height="20" rx="4" fill="#dc2626"/>
+  <text x="56" y="188" font-family="Arial, sans-serif" font-size="14" fill="#334155">Warnings: 1</text>
+  <rect x="56" y="198" width="360" height="20" rx="4" fill="#e2e8f0"/>
+  <rect x="56" y="198" width="64" height="20" rx="4" fill="#d97706"/>
+  <text x="56" y="238" font-family="Arial, sans-serif" font-size="14" fill="#334155">Held recommendations: 2</text>
+  <rect x="56" y="248" width="360" height="20" rx="4" fill="#e2e8f0"/>
+  <rect x="56" y="248" width="128" height="20" rx="4" fill="#2563eb"/>
+  <text x="56" y="306" font-family="Arial, sans-serif" font-size="14" fill="#475569">Synthetic data only. No external APIs, credentials, private projects, or live research records.</text>
+</svg>

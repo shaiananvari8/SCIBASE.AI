@@ -1,0 +1,141 @@
+{
+  "title": "SCIBASE Scientific Knowledge Graph Negative-Evidence Guard",
+  "issue": "SCIBASE.AI#17",
+  "claim": "/claim #17",
+  "purpose": "Prevent public knowledge graph recommendations from hiding contradictions, retractions, failed replications, or private negative evidence.",
+  "evaluation": {
+    "status": "block_publication",
+    "generatedAt": "2026-06-04T00:00:00.000Z",
+    "graphId": "scibase-kg-negative-evidence-demo",
+    "digest": "b245bc907bb0911addeb552f2bd24ed4c51e6f895cceca6840a3985df1af39ac",
+    "counts": {
+      "claims": 4,
+      "recommendations": 2,
+      "blockers": 5,
+      "warnings": 1,
+      "heldRecommendations": 2
+    },
+    "blockers": [
+      {
+        "code": "retracted_evidence_in_graph_path",
+        "claimId": "claim:retracted-dataset-link",
+        "recommendationIds": [
+          "rec:recommend-protocol-v2"
+        ],
+        "message": "A graph path or recommendation still depends on retracted evidence."
+      },
+      {
+        "code": "stale_negative_evidence_review",
+        "claimId": "claim:embargoed-contradiction",
+        "ageDays": 64,
+        "message": "Negative evidence has been unresolved past the stale-review window."
+      },
+      {
+        "code": "private_evidence_used_publicly",
+        "claimId": "claim:embargoed-contradiction",
+        "recommendationIds": [
+          "rec:recommend-gene-x-dataset"
+        ],
+        "message": "A public recommendation uses private or embargoed negative-evidence context."
+      },
+      {
+        "code": "unresolved_contradictory_claims",
+        "tripleKey": "paper:crispr-neuro-2024|supports|finding:gene-x-effect",
+        "conflictScore": 0.644,
+        "positiveClaimIds": [
+          "claim:supports-gene-x"
+        ],
+        "negativeClaimIds": [
+          "claim:failed-replication-gene-x"
+        ],
+        "recommendationIds": [
+          "rec:recommend-gene-x-dataset"
+        ],
+        "message": "Conflicting positive and negative evidence requires curator review before recommendations publish."
+      },
+      {
+        "code": "failed_replication_without_curator_outcome",
+        "claimId": "claim:failed-replication-gene-x",
+        "recommendationIds": [
+          "rec:recommend-gene-x-dataset"
+        ],
+        "message": "High-confidence failed replication evidence needs a curator outcome before graph boosts continue."
+      }
+    ],
+    "warnings": [
+      {
+        "code": "missing_negative_evidence_doi",
+        "claimId": "claim:embargoed-contradiction",
+        "message": "Negative evidence should keep a DOI or stable public source identifier before curator review."
+      }
+    ],
+    "actions": [
+      {
+        "type": "request_curator_decision",
+        "claimId": "claim:embargoed-contradiction",
+        "reason": "Negative evidence is stale and still affects graph recommendations."
+      },
+      {
+        "type": "open_conflict_review",
+        "tripleKey": "paper:crispr-neuro-2024|supports|finding:gene-x-effect",
+        "claimIds": [
+          "claim:supports-gene-x",
+          "claim:failed-replication-gene-x"
+        ],
+        "reason": "Positive and negative evidence both exceed the publication hold threshold."
+      }
+    ],
+    "claimActions": [
+      {
+        "claimId": "claim:retracted-dataset-link",
+        "decision": "block",
+        "reason": "Retracted or withdrawn evidence cannot support public graph recommendations."
+      }
+    ],
+    "recommendationActions": [
+      {
+        "recommendationId": "rec:recommend-gene-x-dataset",
+        "decision": "hold",
+        "reasons": [
+          "private_evidence_for_public_recommendation",
+          "unresolved_conflict",
+          "failed_replication"
+        ],
+        "requiredActions": [
+          "Replace private evidence with a public citation or keep the recommendation internal.",
+          "Redact any embargoed evidence from the public graph packet.",
+          "Attach a curator decision that accepts, qualifies, or suppresses the conflict.",
+          "Show contradiction context on the entity page before publication.",
+          "Downgrade recommendation confidence until the failed replication is resolved.",
+          "Expose failed-replication context beside the graph edge."
+        ]
+      },
+      {
+        "recommendationId": "rec:recommend-protocol-v2",
+        "decision": "hold",
+        "reasons": [
+          "retracted_evidence"
+        ],
+        "requiredActions": [
+          "Remove the retracted claim from recommendation evidence.",
+          "Add a public curator note explaining the withdrawal."
+        ]
+      }
+    ],
+    "policy": {
+      "contradictionHoldConfidence": 0.58,
+      "failedReplicationHoldConfidence": 0.55,
+      "staleReviewDays": 30,
+      "requirePublicEvidenceForPublicRecommendations": true,
+      "retractionsBlockAllRecommendations": true,
+      "requireCuratorForConflicts": true
+    }
+  },
+  "reviewerChecklist": [
+    "Every public recommendation has an explicit evidence chain.",
+    "Retracted evidence blocks dependent graph paths.",
+    "Contradictory evidence opens a curator review before publication.",
+    "Failed replication evidence downgrades recommendations until resolved.",
+    "Private or embargoed evidence is not leaked into public recommendation paths."
+  ]
+}
