@@ -1,0 +1,13 @@
+{
+  "name": "enterprise-webhook-replay-guard",
+  "version": "1.0.0",
+  "description": "Webhook and export replay-safety guard for SCIBASE enterprise tooling.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "node --check src/index.js && node --check test/index.test.js && node --check scripts/demo.js",
+    "test": "node --test test/index.test.js",
+    "demo": "node scripts/demo.js"
+  },
+  "license": "MIT"
+}
