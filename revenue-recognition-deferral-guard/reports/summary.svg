@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="360" viewBox="0 0 740 360" role="img" aria-labelledby="title desc">
+  <title id="title">Revenue Recognition Deferral Guard Summary</title>
+  <desc id="desc">SCIBASE issue 20 synthetic finance close guard summary.</desc>
+  <rect width="740" height="360" fill="#f8fafc"/>
+  <rect x="32" y="28" width="676" height="304" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="56" y="72" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Revenue Recognition Deferral Guard</text>
+  <text x="56" y="104" font-family="Arial, sans-serif" font-size="15" fill="#334155">Status: block_close | Digest: 8b6865927e5e430b</text>
+  <text x="56" y="140" font-family="Arial, sans-serif" font-size="14" fill="#334155">Allowed recognized: $9088.00</text>
+  <rect x="56" y="150" width="380" height="22" rx="4" fill="#e2e8f0"/>
+  <rect x="56" y="150" width="129" height="22" rx="4" fill="#16a34a"/>
+  <text x="56" y="195" font-family="Arial, sans-serif" font-size="14" fill="#334155">Deferred revenue: $23912.00</text>
+  <rect x="56" y="205" width="380" height="22" rx="4" fill="#e2e8f0"/>
+  <rect x="56" y="205" width="340" height="22" rx="4" fill="#2563eb"/>
+  <text x="56" y="250" font-family="Arial, sans-serif" font-size="14" fill="#334155">Held obligations: 3</text>
+  <rect x="56" y="260" width="380" height="22" rx="4" fill="#e2e8f0"/>
+  <rect x="56" y="260" width="43" height="22" rx="4" fill="#dc2626"/>
+  <text x="56" y="316" font-family="Arial, sans-serif" font-size="14" fill="#475569">Synthetic contracts only. No processors, financial-account actions, tax filing, or external APIs.</text>
+</svg>

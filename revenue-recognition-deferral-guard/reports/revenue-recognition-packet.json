@@ -1,0 +1,141 @@
+{
+  "title": "SCIBASE Revenue Recognition Deferral Guard",
+  "issue": "SCIBASE.AI#20",
+  "claim": "/claim #20",
+  "purpose": "Prevent revenue close packets from recognizing subscription, compute-credit, or licensing revenue before delivery evidence exists.",
+  "evaluation": {
+    "status": "block_close",
+    "asOf": "2026-06-04T00:00:00.000Z",
+    "packetId": "scibase-revenue-recognition-close-2026-06",
+    "digest": "8b6865927e5e430b33924f2853f0d9c0e7c005bb6002eabd6250d82d57c0ebe2",
+    "totals": {
+      "contracts": 2,
+      "obligations": 3,
+      "acceptedRecognizedCents": 0,
+      "allowedRecognizedCents": 908800,
+      "deferredCents": 2391200,
+      "blockers": 6,
+      "warnings": 0,
+      "heldObligations": 3
+    },
+    "blockers": [
+      {
+        "code": "premature_revenue_recognition",
+        "contractId": "contract:lab-annual-pro",
+        "obligationId": "obl:annual-subscription",
+        "recognizedCents": 1800000,
+        "allowedRecognizedCents": 759452,
+        "message": "Revenue is recognized before the obligation is sufficiently delivered."
+      },
+      {
+        "code": "premature_revenue_recognition",
+        "contractId": "contract:lab-annual-pro",
+        "obligationId": "obl:compute-credits",
+        "recognizedCents": 450000,
+        "allowedRecognizedCents": 120000,
+        "message": "Revenue is recognized before the obligation is sufficiently delivered."
+      },
+      {
+        "code": "usage_credits_recognized_before_consumption",
+        "contractId": "contract:lab-annual-pro",
+        "obligationId": "obl:compute-credits",
+        "consumedCents": 120000,
+        "recognizedCents": 450000,
+        "message": "Usage credit revenue exceeds consumed or expired value."
+      },
+      {
+        "code": "missing_recognition_evidence",
+        "contractId": "contract:lab-annual-pro",
+        "obligationId": "obl:compute-credits",
+        "message": "Recognized revenue lacks required delivery evidence."
+      },
+      {
+        "code": "premature_revenue_recognition",
+        "contractId": "contract:consortium-license",
+        "obligationId": "obl:analytics-license-export",
+        "recognizedCents": 900000,
+        "allowedRecognizedCents": 29348,
+        "message": "Revenue is recognized before the obligation is sufficiently delivered."
+      },
+      {
+        "code": "missing_recognition_evidence",
+        "contractId": "contract:consortium-license",
+        "obligationId": "obl:analytics-license-export",
+        "message": "Recognized revenue lacks required delivery evidence."
+      }
+    ],
+    "warnings": [],
+    "actions": [],
+    "obligationActions": [
+      {
+        "contractId": "contract:lab-annual-pro",
+        "obligationId": "obl:annual-subscription",
+        "kind": "subscription",
+        "decision": "hold",
+        "allocatedCents": 1800000,
+        "recognizedCents": 1800000,
+        "allowedRecognizedCents": 759452,
+        "deferredCents": 1040548,
+        "reasons": [
+          "premature_recognition"
+        ],
+        "requiredActions": [
+          "Move unearned revenue into deferred revenue until service is delivered."
+        ]
+      },
+      {
+        "contractId": "contract:lab-annual-pro",
+        "obligationId": "obl:compute-credits",
+        "kind": "usage_credit",
+        "decision": "hold",
+        "allocatedCents": 600000,
+        "recognizedCents": 450000,
+        "allowedRecognizedCents": 120000,
+        "deferredCents": 480000,
+        "reasons": [
+          "premature_recognition",
+          "unconsumed_usage_credits",
+          "missing_recognition_evidence"
+        ],
+        "requiredActions": [
+          "Move unearned revenue into deferred revenue until service is delivered.",
+          "Recognize compute-credit revenue only as credits are consumed or expire.",
+          "Attach delivery, consumption, or export evidence for the recognized amount."
+        ]
+      },
+      {
+        "contractId": "contract:consortium-license",
+        "obligationId": "obl:analytics-license-export",
+        "kind": "license_export",
+        "decision": "hold",
+        "allocatedCents": 900000,
+        "recognizedCents": 900000,
+        "allowedRecognizedCents": 29348,
+        "deferredCents": 870652,
+        "reasons": [
+          "premature_recognition",
+          "missing_recognition_evidence"
+        ],
+        "requiredActions": [
+          "Move unearned revenue into deferred revenue until service is delivered.",
+          "Attach delivery, consumption, or export evidence for the recognized amount."
+        ]
+      }
+    ],
+    "policy": {
+      "maxRoundingDriftCents": 2,
+      "requireEvidenceForRecognition": true,
+      "blockFutureServiceRecognition": true,
+      "blockUnconsumedUsageCredits": true,
+      "requireContractWindow": true,
+      "requireAllocationMatchesInvoice": true
+    }
+  },
+  "reviewerChecklist": [
+    "Invoice amount reconciles to performance obligation allocations.",
+    "Subscription revenue is deferred until the service period is earned.",
+    "Compute-credit revenue is recognized only on consumption or expiry.",
+    "Licensing/export revenue has delivery evidence before close.",
+    "Held obligations include deterministic remediation actions."
+  ]
+}
