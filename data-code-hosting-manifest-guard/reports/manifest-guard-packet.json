@@ -1,0 +1,123 @@
+{
+  "generatedAt": "2026-06-04T00:00:00.000Z",
+  "readyResult": {
+    "status": "ready_for_repository_release",
+    "summary": {
+      "artifactCount": 2,
+      "datasetCount": 1,
+      "codeCount": 1,
+      "blockerCount": 0,
+      "warningCount": 0
+    },
+    "blockers": [],
+    "warnings": [],
+    "auditDigest": "b00f635cbe73f436a63d6338a7b6fe87dad6a923c75943df5d0e2b33c704e44a"
+  },
+  "blockedResult": {
+    "status": "block_publication",
+    "summary": {
+      "artifactCount": 1,
+      "datasetCount": 1,
+      "codeCount": 0,
+      "blockerCount": 10,
+      "warningCount": 5
+    },
+    "blockers": [
+      {
+        "code": "missing_metadata",
+        "message": "Required metadata field 'authors' is missing.",
+        "evidence": "authors"
+      },
+      {
+        "code": "missing_metadata",
+        "message": "Required metadata field 'license' is missing.",
+        "evidence": "license"
+      },
+      {
+        "code": "missing_metadata",
+        "message": "Required metadata field 'doi' is missing.",
+        "evidence": "doi"
+      },
+      {
+        "code": "missing_metadata",
+        "message": "Required metadata field 'keywords' is missing.",
+        "evidence": "keywords"
+      },
+      {
+        "code": "missing_metadata",
+        "message": "Required metadata field 'schemaVersion' is missing.",
+        "evidence": "schemaVersion"
+      },
+      {
+        "code": "invalid_artifact_hash",
+        "message": "Artifact 'unhashed-export' does not contain a valid SHA-256 hash lock.",
+        "evidence": "missing"
+      },
+      {
+        "code": "embargo_without_release_date",
+        "message": "Embargoed repositories need an explicit release date.",
+        "evidence": {
+          "visibility": "embargoed"
+        }
+      },
+      {
+        "code": "missing_execution_environment",
+        "message": "Executable repository hosting needs a Dockerfile, environment.yml, notebook kernel, or equivalent runtime definition.",
+        "evidence": {
+          "kind": "docker",
+          "definition": ""
+        }
+      },
+      {
+        "code": "missing_reproducibility_commands",
+        "message": "Repository needs at least one command that reproduces or verifies the hosted outputs.",
+        "evidence": {
+          "commands": []
+        }
+      },
+      {
+        "code": "missing_versioning_policy",
+        "message": "Repository needs explicit versioning strategy and current tag metadata.",
+        "evidence": {
+          "strategy": "",
+          "currentTag": ""
+        }
+      }
+    ],
+    "warnings": [
+      {
+        "code": "missing_code_artifact",
+        "message": "No executable code, notebook, package, or model artifact is registered.",
+        "evidence": [
+          "dataset"
+        ]
+      },
+      {
+        "code": "dataset_schema_missing",
+        "message": "Dataset 'unhashed-export' does not declare a metadata schema.",
+        "evidence": "unhashed-export"
+      },
+      {
+        "code": "docker_definition_unclear",
+        "message": "Docker runtime is declared without a Dockerfile-style definition pointer.",
+        "evidence": ""
+      },
+      {
+        "code": "missing_output_digest",
+        "message": "Reproducibility command has no expected output digest.",
+        "evidence": {
+          "commands": []
+        }
+      },
+      {
+        "code": "missing_diffable_paths",
+        "message": "No diffable paths are declared for dataset/code review.",
+        "evidence": {
+          "strategy": "",
+          "currentTag": ""
+        }
+      }
+    ],
+    "auditDigest": "777f3022d220fed8225ca1f9586d09274e35b149e2cd764a753769c72c8dd951"
+  }
+}

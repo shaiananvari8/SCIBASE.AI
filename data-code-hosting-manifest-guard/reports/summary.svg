@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="300" viewBox="0 0 760 300" role="img" aria-label="Data code hosting manifest guard summary">
+  <rect width="760" height="300" fill="#f8fafc"/>
+  <rect x="28" y="28" width="704" height="244" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="56" y="72" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Data and Code Hosting Manifest Guard</text>
+  <text x="56" y="110" font-family="Arial, sans-serif" font-size="16" fill="#334155">Status</text>
+  <rect x="56" y="124" width="320" height="42" rx="6" fill="#b91c1c"/>
+  <text x="72" y="151" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">block_publication</text>
+  <text x="56" y="202" font-family="Arial, sans-serif" font-size="16" fill="#334155">Artifacts 1 | Datasets 1 | Code 0</text>
+  <text x="56" y="232" font-family="Arial, sans-serif" font-size="16" fill="#334155">Blockers 10 | Warnings 5</text>
+  <text x="56" y="258" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Audit 777f3022d220fed8225ca1f9...</text>
+</svg>

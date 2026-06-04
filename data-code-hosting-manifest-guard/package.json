@@ -1,0 +1,11 @@
+{
+  "name": "data-code-hosting-manifest-guard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/index.js && node --check scripts/demo.js && node --check test/index.test.js",
+    "test": "node --test test/index.test.js",
+    "demo": "node scripts/demo.js"
+  }
+}
