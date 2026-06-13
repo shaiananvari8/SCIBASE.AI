@@ -1,0 +1,108 @@
+{
+  "title": "SCIBASE Reputation Appeal Evidence Guard",
+  "issue": "SCIBASE.AI#15",
+  "claim": "/claim #15",
+  "evaluation": {
+    "status": "hold_reputation_change",
+    "generatedAt": "2026-06-13T18:00:00.000Z",
+    "packetId": "scibase-reputation-appeal-demo",
+    "digest": "63127cd902d761c84395f0c2c5bf2491a6b6011195e74a7259d94411fb0ceb2c",
+    "counts": {
+      "users": 3,
+      "sanctions": 2,
+      "appeals": 2,
+      "blockers": 5,
+      "warnings": 1,
+      "heldAppeals": 1
+    },
+    "blockers": [
+      {
+        "code": "insufficient_evidence",
+        "appealId": "app-review-abuse",
+        "message": "Appeal does not include enough evidence for peer validation.",
+        "evidenceItems": 1,
+        "requiredEvidenceItems": 2
+      },
+      {
+        "code": "insufficient_independent_review",
+        "appealId": "app-review-abuse",
+        "message": "Appeal does not have enough independent conflict-free reviewers.",
+        "independentReviewers": 1,
+        "requiredIndependentReviewers": 2
+      },
+      {
+        "code": "same_actor_reappeal",
+        "appealId": "app-review-abuse",
+        "message": "Original decision actor cannot also decide the appeal."
+      },
+      {
+        "code": "appeal_window_expired",
+        "appealId": "app-review-abuse",
+        "message": "Appeal was submitted outside the configured appeal window.",
+        "appealAgeDays": 104,
+        "maxAppealAgeDays": 45
+      },
+      {
+        "code": "probation_too_long",
+        "appealId": "app-review-abuse",
+        "message": "Reinstatement probation exceeds the configured maximum.",
+        "probationDays": 180,
+        "maxProbationDays": 90
+      }
+    ],
+    "warnings": [
+      {
+        "code": "appeal_sla_too_long",
+        "appealId": "app-review-abuse",
+        "message": "Decision due date exceeds the configured appeal SLA.",
+        "slaHours": 2664,
+        "maxSlaHours": 168
+      }
+    ],
+    "decisions": [
+      {
+        "appealId": "app-duplicate-credit",
+        "userId": "usr-dataset-curator",
+        "sanctionId": "san-duplicate-credit",
+        "decision": "release",
+        "reasons": [],
+        "requiredActions": []
+      },
+      {
+        "appealId": "app-review-abuse",
+        "userId": "usr-protocol-author",
+        "sanctionId": "san-review-abuse",
+        "decision": "hold",
+        "reasons": [
+          "insufficient_evidence",
+          "insufficient_independent_review",
+          "same_actor_reappeal",
+          "appeal_window_expired",
+          "probation_too_long"
+        ],
+        "requiredActions": [
+          "Attach at least 2 evidence items.",
+          "Add 2 independent reviewer decisions with no conflicts.",
+          "Assign a separate appeal decision actor.",
+          "Escalate expired appeals to a governance exception review.",
+          "Reduce reinstatement probation to the policy maximum."
+        ]
+      }
+    ],
+    "policy": {
+      "maxAppealAgeDays": 45,
+      "slaHours": 168,
+      "minIndependentReviewers": 2,
+      "minEvidenceItems": 2,
+      "maxProbationDays": 90,
+      "requireActorSeparation": true
+    }
+  },
+  "reviewerChecklist": [
+    "Appeals reference an existing reputation profile and sanction.",
+    "Each appeal has the configured evidence threshold.",
+    "Independent reviewers disclose no conflicts.",
+    "Original penalty actors do not decide their own appeals.",
+    "Reinstatement probation stays bounded by policy."
+  ]
+}
