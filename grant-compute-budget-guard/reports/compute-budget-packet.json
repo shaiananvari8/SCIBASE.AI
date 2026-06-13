@@ -1,0 +1,100 @@
+{
+  "title": "SCIBASE Grant Compute Budget Guard",
+  "issue": "SCIBASE.AI#20",
+  "claim": "/claim #20",
+  "evaluation": {
+    "status": "hold_billing",
+    "generatedAt": "2026-06-13T18:30:00.000Z",
+    "packetId": "scibase-grant-compute-budget-demo",
+    "digest": "a0876258828149a3de20dd81473f46891355c1b423bb7d3f71b81377dacf2d7a",
+    "counts": {
+      "accounts": 2,
+      "grants": 2,
+      "blockers": 6,
+      "warnings": 0,
+      "heldAccounts": 1
+    },
+    "blockers": [
+      {
+        "code": "missing_award_id",
+        "accountId": "acct-lab-hold",
+        "message": "Grant-backed account is missing an award id."
+      },
+      {
+        "code": "expired_grant",
+        "accountId": "acct-lab-hold",
+        "message": "Grant has expired before pending usage billing."
+      },
+      {
+        "code": "grant_billing_hold",
+        "accountId": "acct-lab-hold",
+        "message": "Grant is under a billing hold."
+      },
+      {
+        "code": "missing_purchase_order",
+        "accountId": "acct-lab-hold",
+        "message": "Institutional invoice account is missing a purchase order."
+      },
+      {
+        "code": "budget_overage",
+        "accountId": "acct-lab-hold",
+        "message": "Projected compute spend exceeds the configured budget limit.",
+        "projectedSpend": 5750,
+        "budgetLimit": 5000,
+        "overagePercent": 15
+      },
+      {
+        "code": "low_compute_margin",
+        "accountId": "acct-lab-hold",
+        "message": "Pending usage falls below the minimum gross margin threshold.",
+        "grossMarginPercent": 20,
+        "minGrossMarginPercent": 30
+      }
+    ],
+    "warnings": [],
+    "decisions": [
+      {
+        "accountId": "acct-lab-stable",
+        "institution": "North Campus Lab",
+        "decision": "bill",
+        "reasons": [],
+        "requiredActions": []
+      },
+      {
+        "accountId": "acct-lab-hold",
+        "institution": "Materials Institute",
+        "decision": "hold",
+        "reasons": [
+          "missing_award_id",
+          "expired_grant",
+          "grant_billing_hold",
+          "missing_purchase_order",
+          "budget_overage",
+          "low_compute_margin"
+        ],
+        "requiredActions": [
+          "Add the grant award id before recognizing sponsored compute revenue.",
+          "Move usage to a renewed grant or institutional invoice before billing.",
+          "Resolve the sponsor billing hold before creating an invoice.",
+          "Attach a purchase order for institutional invoicing.",
+          "Require budget-owner approval before converting usage to billable spend.",
+          "Reprice the compute job or route it to a cheaper execution tier."
+        ]
+      }
+    ],
+    "policy": {
+      "maxOveragePercent": 5,
+      "minGrossMarginPercent": 30,
+      "requirePurchaseOrderForInvoice": true,
+      "requireGrantAwardId": true,
+      "blockExpiredGrants": true
+    }
+  },
+  "reviewerChecklist": [
+    "Grant-backed usage has an award id and active grant window.",
+    "Institutional invoice accounts include purchase orders.",
+    "Pending AI compute charges stay within approved budget limits.",
+    "Billing holds stop invoices before revenue recognition.",
+    "Compute usage preserves the configured gross margin floor."
+  ]
+}
