@@ -4,22 +4,135 @@
   "claim": "/claim #19",
   "evaluation": {
     "status": "block_delivery",
+    "generatedAt": "2026-06-04T00:00:00.000Z",
+    "packetId": "scibase-enterprise-webhook-replay-demo",
+    "digest": "26823509ad3c7d6dfc5ceecaf9c26be92fba665bfd348d8aa1e0bfac3f20c7d1",
     "counts": {
       "destinations": 2,
       "events": 4,
       "blockers": 8,
-      "warnings": 1,
+      "warnings": 0,
       "heldEvents": 3
     },
     "blockers": [
-      "duplicate_event_id",
-      "reused_idempotency_key",
-      "signature_replay",
-      "stale_retry_window",
-      "non_monotonic_sequence",
-      "out_of_order_export_batch",
-      "missing_destination_acknowledgement",
-      "missing_idempotency_key"
-    ]
-  }
+      {
+        "code": "duplicate_event_id",
+        "eventId": "evt-project-created-001",
+        "message": "The same event id appears in multiple delivery records."
+      },
+      {
+        "code": "reused_idempotency_key",
+        "eventId": "evt-project-created-001",
+        "message": "The same idempotency key appears on multiple delivery records."
+      },
+      {
+        "code": "signature_replay",
+        "eventId": "evt-project-created-001",
+        "message": "The same signature digest appears on multiple events."
+      },
+      {
+        "code": "stale_retry_window",
+        "eventId": "evt-project-created-001",
+        "message": "Retry delivery is outside the allowed replay window.",
+        "ageMinutes": 170
+      },
+      {
+        "code": "non_monotonic_sequence",
+        "eventId": "evt-project-created-001",
+        "message": "Destination stream sequence is not monotonic.",
+        "previousSequence": 42,
+        "sequence": 42
+      },
+      {
+        "code": "out_of_order_export_batch",
+        "eventId": "evt-export-043",
+        "message": "Export batch sequence is not newer than the destination acknowledgement."
+      },
+      {
+        "code": "missing_destination_acknowledgement",
+        "eventId": "evt-export-043",
+        "message": "Export-completed event has no destination acknowledgement."
+      },
+      {
+        "code": "missing_idempotency_key",
+        "eventId": "evt-lms-sync-009",
+        "message": "Enterprise delivery requires an idempotency key."
+      }
+    ],
+    "warnings": [],
+    "eventActions": [
+      {
+        "eventId": "evt-project-created-001",
+        "deliveryId": "del-001",
+        "destination": "institutional-repository",
+        "stream": "project-events",
+        "decision": "deliver",
+        "reasons": [],
+        "requiredActions": []
+      },
+      {
+        "eventId": "evt-project-created-001",
+        "deliveryId": "del-002",
+        "destination": "institutional-repository",
+        "stream": "project-events",
+        "decision": "hold",
+        "reasons": [
+          "duplicate_event_id",
+          "reused_idempotency_key",
+          "signature_replay",
+          "stale_retry_window",
+          "non_monotonic_sequence"
+        ],
+        "requiredActions": [
+          "Collapse duplicate delivery rows under one canonical event id.",
+          "Rotate the idempotency key or suppress the duplicate delivery.",
+          "Regenerate the signature with a fresh timestamp and delivery nonce.",
+          "Escalate stale retries for manual review instead of automatic replay.",
+          "Rebuild the destination stream from the last acknowledged sequence."
+        ]
+      },
+      {
+        "eventId": "evt-export-043",
+        "deliveryId": "del-003",
+        "destination": "institutional-repository",
+        "stream": "export-events",
+        "decision": "hold",
+        "reasons": [
+          "out_of_order_export_batch",
+          "missing_destination_acknowledgement"
+        ],
+        "requiredActions": [
+          "Regenerate the export batch after the destination acknowledgement.",
+          "Hold export completion until destination acknowledgement is present."
+        ]
+      },
+      {
+        "eventId": "evt-lms-sync-009",
+        "deliveryId": "del-004",
+        "destination": "lms-sync",
+        "stream": "course-events",
+        "decision": "hold",
+        "reasons": [
+          "missing_idempotency_key"
+        ],
+        "requiredActions": [
+          "Attach a stable idempotency key before enterprise delivery."
+        ]
+      }
+    ],
+    "policy": {
+      "maxRetryAgeMinutes": 120,
+      "maxClockSkewMinutes": 10,
+      "requireIdempotencyKey": true,
+      "blockSignatureReplay": true,
+      "blockOutOfOrderExports": true
+    }
+  },
+  "reviewerChecklist": [
+    "Each enterprise event has a stable idempotency key.",
+    "Duplicate event ids and repeated signature digests are held.",
+    "Destination streams remain monotonic by destination and stream.",
+    "Retry attempts outside the replay window are escalated.",
+    "Export-completed events wait for ordered manifests and destination acknowledgement."
+  ]
 }
