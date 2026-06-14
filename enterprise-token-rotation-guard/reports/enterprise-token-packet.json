@@ -1,0 +1,113 @@
+{
+  "title": "SCIBASE Enterprise Token Rotation Guard",
+  "issue": "SCIBASE.AI#19",
+  "claim": "/claim #19",
+  "evaluation": {
+    "status": "hold_integration",
+    "generatedAt": "2026-06-13T19:00:00.000Z",
+    "packetId": "scibase-enterprise-token-demo",
+    "digest": "e8c0d01bc2dfd3d313262b963fc9babcd8ab9588f6ccba24526047ed6453fb6b",
+    "counts": {
+      "integrations": 2,
+      "owners": 2,
+      "blockers": 6,
+      "warnings": 1,
+      "heldIntegrations": 1
+    },
+    "blockers": [
+      {
+        "code": "orphan_owner",
+        "integrationId": "int-hris-sync",
+        "message": "Integration owner is missing or inactive."
+      },
+      {
+        "code": "stale_token",
+        "integrationId": "int-hris-sync",
+        "message": "Integration token exceeds the rotation window.",
+        "tokenAgeDays": 163
+      },
+      {
+        "code": "overbroad_scopes",
+        "integrationId": "int-hris-sync",
+        "message": "Integration has scopes outside the allowlist.",
+        "overbroadScopes": [
+          "admin:root"
+        ]
+      },
+      {
+        "code": "stale_audit_export",
+        "integrationId": "int-hris-sync",
+        "message": "Audit export is outside the recency window.",
+        "auditAgeDays": 24
+      },
+      {
+        "code": "sso_group_drift",
+        "integrationId": "int-hris-sync",
+        "message": "SSO group drift exceeds policy.",
+        "ssoGroupDrift": 6
+      },
+      {
+        "code": "missing_dpa_approval",
+        "integrationId": "int-hris-sync",
+        "message": "Restricted-data integration lacks DPA approval."
+      }
+    ],
+    "warnings": [
+      {
+        "code": "webhook_failure_streak",
+        "integrationId": "int-hris-sync",
+        "message": "Webhook delivery has repeated failures.",
+        "webhookFailures": 4
+      }
+    ],
+    "decisions": [
+      {
+        "integrationId": "int-dspace-sync",
+        "tenant": "North Campus",
+        "decision": "keep_active",
+        "reasons": [],
+        "requiredActions": []
+      },
+      {
+        "integrationId": "int-hris-sync",
+        "tenant": "Medical Research Institute",
+        "decision": "hold",
+        "reasons": [
+          "orphan_owner",
+          "stale_token",
+          "overbroad_scopes",
+          "stale_audit_export",
+          "sso_group_drift",
+          "missing_dpa_approval"
+        ],
+        "requiredActions": [
+          "Assign an active institutional owner before keeping the integration active.",
+          "Rotate the integration token and record the rotation timestamp.",
+          "Remove scopes outside the enterprise allowlist.",
+          "Generate a fresh audit export before the next sync.",
+          "Reconcile SSO group membership before syncing permissions.",
+          "Attach DPA approval before syncing restricted enterprise data."
+        ]
+      }
+    ],
+    "policy": {
+      "maxTokenAgeDays": 90,
+      "maxAuditExportAgeDays": 7,
+      "maxSsoGroupDrift": 3,
+      "allowedScopes": [
+        "project:read",
+        "project:write",
+        "review:read",
+        "webhook:publish",
+        "audit:read"
+      ]
+    }
+  },
+  "reviewerChecklist": [
+    "Integration tokens are inside the rotation window.",
+    "Scopes are limited to the enterprise allowlist.",
+    "Every integration has an active institutional owner.",
+    "Audit exports are fresh before enterprise syncs.",
+    "Restricted data integrations have DPA approval."
+  ]
+}
