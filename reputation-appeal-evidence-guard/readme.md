@@ -18,4 +18,12 @@ npm test
 npm run demo
 ```
 
+## Demo Evidence
+
+The demo transcript is captured in `reports/demo-transcript.md`. The demo generates these reviewer artifacts:
+
+- `reports/appeal-evidence-report.md`
+- `reports/appeal-evidence-packet.json`
+- `reports/summary.svg`
+
 The demo data is synthetic and does not include private user records, institutional credentials, or external services.
