@@ -28,6 +28,7 @@ The demo writes reviewer artifacts under `reports/`:
 - `bayesian-prior-sensitivity-packet.json`
 - `bayesian-prior-sensitivity-report.md`
 - `summary.svg`
+- `demo-transcript.md`
 - `demo.avi`
 
 ## Safety
