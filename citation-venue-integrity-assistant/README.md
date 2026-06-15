@@ -28,6 +28,7 @@ The demo writes reviewer artifacts under `reports/`:
 - `citation-venue-integrity-packet.json`
 - `citation-venue-integrity-report.md`
 - `summary.svg`
+- `demo-transcript.md`
 - `demo.avi`
 
 ## Safety
