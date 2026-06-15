@@ -28,6 +28,7 @@ The demo writes reviewer artifacts under `reports/`:
 - `local-cache-privacy-packet.json`
 - `local-cache-privacy-report.md`
 - `summary.svg`
+- `demo-transcript.md`
 - `demo.avi`
 
 ## Safety
