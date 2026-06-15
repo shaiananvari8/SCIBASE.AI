@@ -26,6 +26,7 @@ npm run demo:video
 - `reports/workload-review-packet.json`
 - `reports/workload-review-report.md`
 - `reports/summary.svg`
+- `reports/demo-transcript.md`
 
 `npm run demo:video` generates:
 
