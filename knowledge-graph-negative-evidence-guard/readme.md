@@ -32,7 +32,8 @@ Generated reviewer artifacts:
 - `reports/negative-evidence-packet.json`
 - `reports/negative-evidence-report.md`
 - `reports/summary.svg`
+- `reports/demo-transcript.md`
 
 ## Claim
 
-Use `/claim #17` in the pull request body.
+The PR conversation includes `/claim #17` for Algora detection.
