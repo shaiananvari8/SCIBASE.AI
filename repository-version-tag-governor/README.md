@@ -31,6 +31,7 @@ The demo writes reviewer artifacts under `reports/`:
 - `repository-version-tag-packet.json`
 - `repository-version-tag-report.md`
 - `summary.svg`
+- `demo-transcript.md`
 - `demo.avi`
 
 ## Safety
