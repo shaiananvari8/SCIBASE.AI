@@ -25,6 +25,7 @@ The demo writes reviewer artifacts under `reports/`:
 - `reputation-anomaly-packet.json`
 - `reputation-anomaly-report.md`
 - `summary.svg`
+- `demo-transcript.md`
 - `demo.avi`
 
 ## Safety
