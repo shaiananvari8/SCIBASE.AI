@@ -23,4 +23,9 @@ npm test
 npm run demo
 ```
 
-`npm run demo` writes a JSON packet, Markdown report, and SVG summary under `reports/`.
+`npm run demo` writes reviewer artifacts under `reports/`:
+
+- `manifest-guard-packet.json`
+- `manifest-guard-report.md`
+- `summary.svg`
+- `demo-transcript.md`
