@@ -11,4 +11,12 @@ npm test
 npm run demo
 ```
 
+## Demo Evidence
+
+The demo transcript is captured in `reports/demo-transcript.md`. The demo generates these reviewer artifacts:
+
+- `reports/enterprise-token-report.md`
+- `reports/enterprise-token-packet.json`
+- `reports/summary.svg`
+
 The demo data is synthetic and does not contact SSO providers, institutional repositories, or production APIs.
