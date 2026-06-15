@@ -11,4 +11,12 @@ npm test
 npm run demo
 ```
 
+## Demo Evidence
+
+The demo transcript is captured in `reports/demo-transcript.md`. The demo generates these reviewer artifacts:
+
+- `reports/compute-budget-report.md`
+- `reports/compute-budget-packet.json`
+- `reports/summary.svg`
+
 The demo data is synthetic and does not call payment processors, cloud providers, or grant systems.
